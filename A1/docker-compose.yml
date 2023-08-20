@@ -1,0 +1,15 @@
+
+services:
+  container1:
+    image: us-central1-docker.pkg.dev/assignment-2-389700/k8s-container-1/container1
+    ports:
+      - "6000:6000"
+    volumes:
+      - ./:/files
+
+  container2:
+    image: us-central1-docker.pkg.dev/assignment-2-389700/k8s-container-2/container2
+    ports:
+      - "8001:8001"
+    volumes:
+       - ./:/files
