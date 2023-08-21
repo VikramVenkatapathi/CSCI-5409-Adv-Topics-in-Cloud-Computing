@@ -3,7 +3,6 @@
 ## Assignments and Topics
 
 1. **Assignment 1: Docker**
-   - Describe Assignment 1 here.
    - This assignment involves building a microservice architecture using Docker containers.
    - Container 1:
      - Implemented in Flask, acts as an orchestrator and gatekeeper.
