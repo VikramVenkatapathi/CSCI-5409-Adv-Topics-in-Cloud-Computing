@@ -23,13 +23,11 @@
    - **Keywords: AWS, VPC, EC2, RDS, JSON, Network Security**
 
 4. **[Assignment 4](https://github.com/VikramVenkatapathi/CSCI-5409-Adv-Topics-in-Cloud-Computing/tree/main/A4): State Machine**
-   - Describe Assignment 4 here.
    - This assignment involves implementing a serverless application on AWS using Lambda functions, Step Functions, and API Gateway to perform hashing operations based on provided input.
    - The application receives JSON input, processes it through a state machine, and triggers Lambda functions to hash the data. The results are sent back to another endpoint.
    - **Keywords: AWS Lambda, Step Functions, API Gateway, Serverless Computing, Hashing, REST API**
 
 5. **[Kubernetes(K8s)](https://github.com/VikramVenkatapathi/CSCI-5409-Adv-Topics-in-Cloud-Computing/tree/main/K8s)**
-   - Describe Kubernetes usage here.
    - This setup involves two Docker containers (Cntr1 and Cntr2) running Flask applications, interacting with each other via RESTful endpoints. Cntr1 handles file storage and data validation, while Cntr2 performs calculations on CSV data.
    - The infrastructure is provisioned using Terraform on Google Cloud, creating a container cluster. Keywords: Docker, Flask, REST API, Terraform, Google Cloud.
    - **Keywords: Docker, Flask, REST API, Terraform, Google Cloud**
