@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vikram-service-1
+spec:
+  selector:
+    app: vikram-cntr
+  ports:
+    - protocol: TCP
+      port: 6000
+      targetPort: 6000
+  type: LoadBalancer

@@ -1,0 +1,14 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/assignment-2-389700/k8s-container-2/container2', '.']
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/assignment-2-389700/k8s-container-2/container2']
+
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    args:
+      - run
+      - --filename=./Manifest/
+      - --image=us-central1-docker.pkg.dev/assignment-2-389700/k8s-container-2/container2
+      - --location=us-central1-a
+      - --cluster=cluster-1

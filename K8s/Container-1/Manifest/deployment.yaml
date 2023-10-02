@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vikram-cntr-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vikram-cntr
+  template:
+    metadata:
+      labels:
+        app: vikram-cntr
+    spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: default-pool
+      volumes:
+        - name: vikram-pv1
+      containers:
+        - name: container-1
+          image: us-central1-docker.pkg.dev/assignment-2-389700/k8s-container-1/container1
+          ports:
+            - containerPort: 6000
+          volumeMounts:
+            - name: vikram-pv1
+              mountPath: /vikram_PV_dir 
+              
+        - name: container-2
+          image: us-central1-docker.pkg.dev/assignment-2-389700/k8s-container-2/container2
+          ports:
+            - containerPort: 8001
+          volumeMounts:
+            - name: vikram-pv1
+              mountPath: /vikram_PV_dir
